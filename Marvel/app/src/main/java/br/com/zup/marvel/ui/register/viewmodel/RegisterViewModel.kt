@@ -26,14 +26,14 @@ class RegisterViewModel : ViewModel() {
 
             user.password.isEmpty() -> _errorResponse.value = PASSWORD_EMPTY_ERROR
 
-            (user.email.contains("@", true) &&
-                    user.email.contains(".com", true)) -> {
-                _errorResponse.value = "Tipo de email inválido"
-            }
-
             user.password.length < 8 -> _errorResponse.value = PASSWORD_SMALL_ERROR
 
-            else -> registerUser(user)
+            else ->
+                if ((!user.email.contains("@") && !user.email.contains(".com"))) {
+                    _errorResponse.value = "Tipo de email inválido"
+                } else {
+                    registerUser(user)
+                }
         }
     }
 
