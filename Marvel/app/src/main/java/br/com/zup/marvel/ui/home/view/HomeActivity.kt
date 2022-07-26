@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.zup.marvel.*
 import br.com.zup.marvel.databinding.ActivityHomeBinding
-import br.com.zup.marvel.ui.detalhe.DetalheActivity
+import br.com.zup.marvel.ui.detalhe.view.DetalheActivity
 import br.com.zup.marvel.data.model.Marvel
 import br.com.zup.marvel.ui.home.viewmodel.HomeViewModel
 

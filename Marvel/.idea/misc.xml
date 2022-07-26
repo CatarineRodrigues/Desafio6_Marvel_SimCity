@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/catarine.rodrigues/Desktop/Catalisa/Desafio Android/Desafio28.07/DesafioMarvel/Marvel/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/catarine.rodrigues/Desktop/Catalisa/Desafio Android/Desafio28.07/DesafioMarvel/Marvel/app/src/main/res/layout/activity_detalhe.xml" value="0.1796875" />
         <entry key="..\:/Users/catarine.rodrigues/Desktop/Catalisa/Desafio Android/Desafio28.07/DesafioMarvel/Marvel/app/src/main/res/layout/activity_home.xml" value="0.1796875" />
+        <entry key="..\:/Users/catarine.rodrigues/Desktop/Catalisa/Desafio Android/Desafio28.07/DesafioMarvel/Marvel/app/src/main/res/layout/activity_login.xml" value="0.1796875" />
+        <entry key="..\:/Users/catarine.rodrigues/Desktop/Catalisa/Desafio Android/Desafio28.07/DesafioMarvel/Marvel/app/src/main/res/layout/activity_register.xml" value="0.165625" />
         <entry key="..\:/Users/catarine.rodrigues/Desktop/Catalisa/Desafio Android/Desafio28.07/DesafioMarvel/Marvel/app/src/main/res/layout/activity_splash.xml" value="0.1796875" />
         <entry key="..\:/Users/catarine.rodrigues/Desktop/Catalisa/Desafio Android/Desafio28.07/DesafioMarvel/Marvel/app/src/main/res/layout/marvel_item.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_detalhe.xml" value="0.28125" />

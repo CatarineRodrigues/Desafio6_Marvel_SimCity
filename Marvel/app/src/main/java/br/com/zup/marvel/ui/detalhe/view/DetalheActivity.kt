@@ -1,4 +1,4 @@
-package br.com.zup.marvel.ui.detalhe
+package br.com.zup.marvel.ui.detalhe.view
 
 import android.os.Bundle
 import android.view.MenuItem

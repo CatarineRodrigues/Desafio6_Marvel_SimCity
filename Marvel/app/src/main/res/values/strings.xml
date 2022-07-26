@@ -10,4 +10,12 @@
     <string name="filmes_texto">AQUI PODERIA TER UM RECYCLERVIEW COM ALGUNS FILMES DA MARVEL!</string>
     <string name="hqs_texto">AQUI PODERIA TER UM RECYCLERVIEW COM ALGUNS HQS DA MARVEL!</string>
     <string name="description_image_splash">Imagem com os personagens da Marvel</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="finish">Registrar conta</string>
+    <string name="login">Login</string>
+    <string name="login_success">Login Realizado com Sucesso!</string>
+    <string name="exit">Sair</string>
+    <string name="create_account">Crie sua conta agora</string>
 </resources>
