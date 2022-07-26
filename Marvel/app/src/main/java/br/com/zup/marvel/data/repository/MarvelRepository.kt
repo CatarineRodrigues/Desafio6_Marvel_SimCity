@@ -2,6 +2,7 @@ package br.com.zup.marvel.data.repository
 
 import br.com.zup.marvel.*
 import br.com.zup.marvel.data.model.Marvel
+import br.com.zup.marvel.utils.*
 
 class MarvelRepository {
     fun getMarvelList(): List<Marvel> {
@@ -10,8 +11,8 @@ class MarvelRepository {
         marvelList.add(
             Marvel(
                 R.drawable.gamora,
-                GAMORRA_NOME,
-                GAMORRA_DESCRICAO
+                GAMORA_NOME,
+                GAMORA_DESCRICAO
             )
         )
 
@@ -26,8 +27,8 @@ class MarvelRepository {
         marvelList.add(
             Marvel(
                 R.drawable.mulher_invisivel,
-                MULHER_INIVISVEL_NOME,
-                MULHER_INVISVEL_DESCRICAO
+                MULHER_INVISIVEL_NOME,
+                MULHER_INVISIVEL_DESCRICAO
             )
         )
 

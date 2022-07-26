@@ -3,7 +3,7 @@ package br.com.zup.marvel.ui.detalhe.view
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import br.com.zup.marvel.MARVEL_KEY
+import br.com.zup.marvel.utils.MARVEL_KEY
 import br.com.zup.marvel.R
 import br.com.zup.marvel.data.model.Marvel
 import br.com.zup.marvel.databinding.ActivityDetalheBinding

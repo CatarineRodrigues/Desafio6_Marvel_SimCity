@@ -7,7 +7,7 @@
     tools:context=".ui.home.view.HomeActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_textHome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_16"
@@ -26,7 +26,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tv_textHome"
         tools:itemCount="7"
         tools:listitem="@layout/marvel_item" />
 

@@ -5,6 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.zup.marvel.domain.model.User
 import br.com.zup.marvel.domain.repository.AuthenticationRepository
+import br.com.zup.marvel.utils.INSERT_EMAIL
+import br.com.zup.marvel.utils.INSERT_PASSWORD
+import br.com.zup.marvel.utils.LOGIN_ERROR
+import br.com.zup.marvel.utils.PASSWORD_SMALL_ERROR
 
 class LoginViewModel : ViewModel() {
     private val repository = AuthenticationRepository()
@@ -17,11 +21,11 @@ class LoginViewModel : ViewModel() {
 
     fun validateDataUser(user: User) {
         when {
-            user.email.isEmpty() -> _errorResponse.value = "Insira seu email"
+            user.email.isEmpty() -> _errorResponse.value = INSERT_EMAIL
 
-            user.password.isEmpty() -> _errorResponse.value = "Insira sua senha"
+            user.password.isEmpty() -> _errorResponse.value = INSERT_PASSWORD
 
-            user.password.length < 8 -> _errorResponse.value = "SENHA INVÁLIDA! Senha deve ter no mínimo 8 caracteres"
+            user.password.length < 8 -> _errorResponse.value = PASSWORD_SMALL_ERROR
 
             else -> {
                 loginUser(user)
@@ -37,7 +41,7 @@ class LoginViewModel : ViewModel() {
             ).addOnSuccessListener {
                 _loginResponse.value = user
             }.addOnFailureListener {
-                _errorResponse.value = "Ops! Ocorreu um erro ao logar o usuário!" + it.message
+                _errorResponse.value = LOGIN_ERROR + it.message
             }
         } catch (ex: Exception) {
             _errorResponse.value = ex.message

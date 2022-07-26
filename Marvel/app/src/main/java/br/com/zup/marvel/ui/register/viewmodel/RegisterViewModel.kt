@@ -2,10 +2,12 @@ package br.com.zup.marvel.ui.register.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import br.com.zup.marvel.domain.model.User
 import br.com.zup.marvel.domain.repository.AuthenticationRepository
+import br.com.zup.marvel.utils.*
 
-class RegisterViewModel {
+class RegisterViewModel : ViewModel() {
     private val authenticationRepository = AuthenticationRepository()
 
     private var _registerResponse = MutableLiveData<User>()
@@ -16,17 +18,20 @@ class RegisterViewModel {
 
     fun validateDataUser(user: User) {
         when {
-            user.name.isEmpty() -> _errorResponse.value = "Preencha seu nome"
+            user.name.isEmpty() -> _errorResponse.value = NAME_EMPTY_ERROR
 
-            user.name.length < 3 -> _errorResponse.value = "Insira um nome com mais caracteres"
+            user.name.length < 3 -> _errorResponse.value = NAME_SMALL_ERROR
 
-            user.email.isEmpty() -> _errorResponse.value = "Insira seu email"
+            user.email.isEmpty() -> _errorResponse.value = EMAIL_EMPTY_ERROR
 
-            (user.email.contains("@", false)) -> _errorResponse.value = "Tipo de email inválido"
+            user.password.isEmpty() -> _errorResponse.value = PASSWORD_EMPTY_ERROR
 
-            user.password.isEmpty() -> _errorResponse.value = "Insira qual será sua senha"
+            (!user.email.contains("@", true) &&
+                    user.email.contains(".com", true)) -> {
+                _errorResponse.value = "Tipo de email inválido"
+            }
 
-            user.password.length < 8 -> _errorResponse.value = "SENHA INVÁLIDA! Senha deve ter no mínimo 8 caracteres"
+            user.password.length < 8 -> _errorResponse.value = PASSWORD_SMALL_ERROR
 
             else -> registerUser(user)
         }
@@ -39,7 +44,7 @@ class RegisterViewModel {
                     _registerResponse.value = user
                 }
             }.addOnFailureListener {
-                _errorResponse.value = "Ops! Ocorreu um erro ao criar o usuário!" + it.message
+                _errorResponse.value = REGISTER_ERROR + it.message
             }
         } catch (ex: Exception) {
             _errorResponse.value = ex.message
