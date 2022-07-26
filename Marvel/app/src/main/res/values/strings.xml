@@ -18,4 +18,5 @@
     <string name="login_success">Login Realizado com Sucesso!</string>
     <string name="exit">Sair</string>
     <string name="create_account">Crie sua conta agora</string>
+    <string name="image_description">Imagem do personagem da Marvel que foi selecionado</string>
 </resources>

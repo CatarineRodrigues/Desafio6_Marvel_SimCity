@@ -26,7 +26,7 @@ class RegisterViewModel : ViewModel() {
 
             user.password.isEmpty() -> _errorResponse.value = PASSWORD_EMPTY_ERROR
 
-            (!user.email.contains("@", true) &&
+            (user.email.contains("@", true) &&
                     user.email.contains(".com", true)) -> {
                 _errorResponse.value = "Tipo de email inválido"
             }
