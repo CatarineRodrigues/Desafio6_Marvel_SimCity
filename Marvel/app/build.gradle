@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "br.com.zup.marvel"
-        minSdk 16
+        minSdk 19
         targetSdk 32
         versionCode 1
         versionName "1.0"
