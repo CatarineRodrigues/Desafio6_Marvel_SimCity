@@ -7,7 +7,7 @@
     tools:context=".ui.register.view.RegisterActivity">
 
     <EditText
-        android:id="@+id/et_username"
+        android:id="@+id/et_userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_useremail"
+        android:id="@+id/et_userEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
@@ -32,7 +32,7 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_username" />
+        app:layout_constraintTop_toBottomOf="@id/et_userName" />
 
     <EditText
         android:id="@+id/et_password"
@@ -44,7 +44,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_useremail" />
+        app:layout_constraintTop_toBottomOf="@+id/et_userEmail" />
 
     <Button
         android:id="@+id/btn_registration"
